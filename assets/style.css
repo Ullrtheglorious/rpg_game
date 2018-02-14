@@ -1,0 +1,40 @@
+.starting_bg {
+    background-image: url("images/main_wallpaper.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.geralt_bg {
+    background-image: url("images/main_wallpaper.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.ciri_bg {
+    background-image: url("images/main_wallpaper.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.triss_bg {
+    background-image: url("images/main_wallpaper.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.yennefer_bg {
+    background-image: url("images/main_wallpaper.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
