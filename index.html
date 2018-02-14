@@ -1,16 +1,60 @@
 <html>
 <head>
     <link rel="icon" type="image/png" href="assets/images/icon.png">
-    <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <title>The Witcher Rpg</title>
+    <title>The Witcher RPG</title>
 </head>
-    <body>
-        <div class="starting_bg">
-
+    <body class="starting_bg">
+        <div class="row">
+            <div class="xs-col-12">
+                <h1>Select your Champion!</h1>
+            </div>
         </div>
+        <div class="container champions">
+            <div class="row">
+                <div class="col-xs-2 ciri_player" id="ciri">
+                    <div class="thumbnail">
+                        <img src="assets/images/ciri.jpg" alt="ciri" class="char_picture">
+                        <div class="caption">
+                            <h4 class="name">Ciri Riannon</h4>
+                            <p class="health">150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-xs-offset-1 geralt_player">
+                    <div class="thumbnail">
+                        <img src="assets/images/geralt.jpg" alt="geralt" class="char_picture">
+                        <div class="caption">
+                            <h4 class="name">Geralt of Rivia</h4>
+                            <p class="health">150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-xs-offset-2 yennefer_player">
+                    <div class="thumbnail">
+                        <img src="assets/images/yennefer.jpg" alt="yennefer" class="char_picture">
+                        <div class="caption">
+                            <h4 class="name">Yennefer </h4>
+                            <p class="health">150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-xs-offset-1 triss_player">
+                    <div class="thumbnail">
+                        <img src="assets/images/triss.jpg" alt="triss" class="char_picture">
+                        <div class="caption">
+                            <h4 class="name">Triss Merigold</h4>
+                            <p class="health">150</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="assets/script.js"></script>
     </body>
 </html>

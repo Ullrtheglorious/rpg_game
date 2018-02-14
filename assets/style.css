@@ -1,40 +1,101 @@
 .starting_bg {
     background-image: url("images/main_wallpaper.jpg");
     height: 100%; 
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 .geralt_bg {
-    background-image: url("images/main_wallpaper.jpg");
+    background-image: url("images/geralt_wallpaper.jpg");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 .ciri_bg {
-    background-image: url("images/main_wallpaper.jpg");
+    background-image: url("images/ciri_wallpaper.jpg");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 .triss_bg {
-    background-image: url("images/main_wallpaper.jpg");
+    background-image: url("images/triss_wallpaper.jpg");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 .yennefer_bg {
-    background-image: url("images/main_wallpaper.jpg");
+    background-image: url("images/yennefer_wallpaper.jpg");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
+}
+h1 {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+.char_picture {
+    width: 170px;
+    padding: 0;
+    border-radius: 50px;
+}
+.thumbnail {
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 50px;
+}
+.name {
+    text-align: center;
+    font-size: 1em;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+.health {
+    text-align: center;
+    font-size: 1em;
+    padding-top: 0px;
+}
+.caption {
+    padding: 0px;
+}
+.champions {
+    position: absolute;
+    bottom: 0px;
+    right: 140px;
+}
+.ciri_player {
+    border: 2px solid red;
+    padding: 0;
+    border-radius: 50px;
+}
+.geralt_player {
+    border: 2px solid red;
+    padding: 0;
+    border-radius: 50px;
+}
+.yennefer_player {
+    border: 2px solid red;
+    padding: 0;
+    border-radius: 50px;
+}
+.triss_player {
+    border: 2px solid red;
+    padding: 0;
+    border-radius: 50px;
 }
