@@ -5,8 +5,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    overflow: hidden;
+    position: fixed;
+    overflow: auto;
 }
 .geralt_bg {
     background-image: url("images/geralt_wallpaper.jpg");
@@ -44,16 +44,19 @@
     position: relative;
     overflow: hidden;
 }
-h1 {
+#title {
     font-family: 'Dosis', sans-serif;
     text-align: center;
     color: white;
     margin-top: 50px;
+
 }
 .char_picture {
-    width: 170px;
+    width: 80px;
+    height: 100%;
     padding: 0;
     border-radius: 50px;
+    margin: 0;
 }
 .thumbnail {
     padding: 0;
@@ -74,10 +77,11 @@ h1 {
 .caption {
     padding: 0px;
 }
-.champions {
-    position: absolute;
-    bottom: 0px;
-    right: 140px;
+.unselectedChampions {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
 }
 .ciri_player {
     border: 2px solid red;
@@ -98,4 +102,31 @@ h1 {
     border: 2px solid red;
     padding: 0;
     border-radius: 50px;
+}
+#playerChampion {
+    position: fixed;
+    top: 20;
+    left:10;
+    padding: 30px;
+}
+#computerChampion {
+    position: fixed;
+    bottom: 80;
+    left:10;
+    padding: 30px;
+}
+#computerDefenders{
+    position: fixed;
+    right:10;
+    top:20;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+#message1{
+    position: absolute;
+    right: 10%;
+    top:50%;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    color: white;
 }
