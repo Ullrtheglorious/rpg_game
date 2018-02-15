@@ -132,7 +132,7 @@ var rpg = {
     },
 // Function for what happens when you click attack
     fight: function () {
-        $("#attack").click(function () {
+        $("#attack").unbind("click").click(function () {
             if (rpg.compChoice === true) {
                 rpg.attackCount++;
                 rpg.enemyHP -= (rpg.attackCount * rpg.championAttack);
