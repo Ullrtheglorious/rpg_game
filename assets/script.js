@@ -138,7 +138,11 @@ var rpg = {
                 rpg.enemyHP -= (rpg.attackCount * rpg.championAttack);
                 $("#computerChampion .hp").text(rpg.enemyHP);
                 rpg.championHP -= rpg.enemyCounter;
+                $("#combatText2").text(rpg.enemyCounter);
                 $("#playerChampion .hp").text(rpg.championHP);
+                $("#combatText").text(rpg.attackCount * rpg.championAttack)
+                $(".text1").show("fast");
+                $(".text2").show("fast");
                 if (rpg.championHP <= 0) {
                     rpg.lose();
                 } else if (rpg.enemyHP <= 0) {
@@ -151,6 +155,8 @@ var rpg = {
     enemyDefeat: function () {
         this.defenders--;
         this.compChoice = false;
+        $(".text1").hide("fast");
+        $(".text2").hide("fast");
         $("#message1").text("Select who to fight next!");
         $(this.enemy).fadeOut('slow');
         $("#attack").hide("slow");
@@ -162,10 +168,12 @@ var rpg = {
     },  
     lose: function () {
         $(this.player).fadeOut('slow');
+        $(".text1").hide("fast");
+        $(".text2").hide("fast");
         $("#message1").text("");
         $("#message2").text("You've died! Try again??");
-        $("#attack").hide("slow");
         $("#tryAgain").show("slow");
+        $("#attack").hide("slow");
         rpg.remainingDefenders.fadeOut("slow");
         $(this.enemy).fadeOut('slow');
     },
@@ -174,6 +182,8 @@ var rpg = {
         $("#message2").text("You win! Try again??");
         $("#attack").hide("slow");
         $("#tryAgain").show("slow");
+        $(".text2").hide("slow");
+        $(".text1").hide("slow");
         $(this.player).fadeOut('slow');
     }, 
     reload: function() {
