@@ -10,9 +10,12 @@
     <title>The Witcher RPG</title>
 </head>
     <body class="starting_bg">
-        <h1 id="title">Select your Champion!</h1>
-        <h2 id="message1"></h2>
-        <h2 id="message2"></h2>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 id="title">Select your Champion!</h1>
+                <h2 id="message1"></h2>
+            </div>
+        </div>
         <div class="container unselectedChampions text-centered">
             <div class="row">
 <!-- Start Ciri Champion area -->
@@ -87,8 +90,9 @@
         </div>
 <!--==============================================================-->
 <!-- Start button for fighting and fight outputs -->
-    <button type="button" id="attack">Attack</button>  
-        
+    <button type="button" class="btn btn-lg" id="attack">Attack</button>  
+    <button type="button" class="btn btn-lg" id="tryAgain" onclick="rpg.reload()">Try Again</button>
+    <h2 id="message2"></h2>
     <script src="assets/script.js"></script>
     </body>
 </html>

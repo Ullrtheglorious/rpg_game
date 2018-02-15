@@ -16,6 +16,7 @@ var rpg = {
     enemyHP : 0,
     defenders : 3,
     attackCount : 0,
+
 // This function selects the initial champion and changes the bg
     charSelect: function() {
         this.ciri.click(function (){
@@ -88,8 +89,7 @@ var rpg = {
                 rpg.enemy = this;
                 rpg.enemyHP = $(this).find('.hp').text();
                 rpg.enemyCounter = parseInt($(".ciri_player > img.char_picture").attr('data-counter'));
-                $("#message1").text("")
-                $("#message2").text("Press the Attack button to fight Ciri");
+                $("#message1").text("Press the Attack button to fight Ciri");
                 rpg.fight();
             }
         });
@@ -101,8 +101,7 @@ var rpg = {
                 rpg.enemy = this;
                 rpg.enemyHP = $(this).find('.hp').text();
                 rpg.enemyCounter = parseInt($(".geralt_player > img.char_picture").attr('data-counter'));
-                $("#message1").text("")
-                $("#message2").text("Press the Attack button to fight Geralt");
+                $("#message1").text("Press the Attack button to fight Geralt");
                 rpg.fight();
             }
         });
@@ -114,8 +113,7 @@ var rpg = {
                 rpg.enemy = this;
                 rpg.enemyHP = $(this).find('.hp').text();
                 rpg.enemyCounter = parseInt($(".yennefer_player > img.char_picture").attr('data-counter'));
-                $("#message1").text("")
-                $("#message2").text("Press the Attack button to fight Yennefer");
+                $("#message1").text("Press the Attack button to fight Yennefer");
                 rpg.fight();
             }
         });
@@ -127,12 +125,12 @@ var rpg = {
                 rpg.enemy = this;
                 rpg.enemyHP = $(this).find('.hp').text();
                 rpg.enemyCounter = parseInt($(".triss_player > img.char_picture").attr('data-counter'));
-                $("#message1").text("")
-                $("#message2").text("Press the Attack button to fight Triss");
+                $("#message1").text("Press the Attack button to fight Triss");
                 rpg.fight();
             }
         });   
     },
+// Function for what happens when you click attack
     fight: function () {
         $("#attack").click(function () {
             if (rpg.compChoice === true) {
@@ -149,10 +147,13 @@ var rpg = {
             }
         });
     },
+// Function for an enemy dying along with win/loss functions
     enemyDefeat: function () {
         this.defenders--;
         this.compChoice = false;
+        $("#message1").text("Select who to fight next!");
         $(this.enemy).fadeOut('slow');
+        $("#attack").hide("slow");
         if (this.defenders > 0) {
             rpg.enemySelect();
         } else {
@@ -161,14 +162,27 @@ var rpg = {
     },  
     lose: function () {
         $(this.player).fadeOut('slow');
-        alert("you lose");
+        $("#message1").text("");
+        $("#message2").text("You've died! Try again??");
+        $("#attack").hide("slow");
+        $("#tryAgain").show("slow");
+        rpg.remainingDefenders.fadeOut("slow");
+        $(this.enemy).fadeOut('slow');
     },
     win: function () {
-        alert("You Win");
+        $("#message1").text("");
+        $("#message2").text("You win! Try again??");
+        $("#attack").hide("slow");
+        $("#tryAgain").show("slow");
+        $(this.player).fadeOut('slow');
     }, 
+    reload: function() {
+    location.reload();
+}
 
 }
 rpg.charSelect();
+$("#tryAgain").hide("slow");
 
 
 
