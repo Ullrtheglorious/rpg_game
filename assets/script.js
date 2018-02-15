@@ -85,6 +85,8 @@ var rpg = {
                 rpg.enemy = this;
                 rpg.enemyHP = $(this).find('.hp').text();
                 rpg.enemyCounter = parseInt($(this).attr('data-counter'));
+                $("#message1").text("")
+                $("#message2").text("Press the Attack button to fight Ciri");
             }
         });
         this.geralt.click(function () {
@@ -94,6 +96,8 @@ var rpg = {
                 rpg.enemy = this;
                 rpg.enemyHP = $(this).find('.hp').text();
                 rpg.enemyCounter = parseInt($(this).attr('data-counter'));
+                $("#message1").text("")
+                $("#message2").text("Press the Attack button to fight Geralt");
             }
         });
         this.yennefer.click(function () {
@@ -103,6 +107,8 @@ var rpg = {
                 rpg.enemy = this;
                 rpg.enemyHP = $(this).find('.hp').text();
                 rpg.enemyCounter = parseInt($(this).attr('data-counter'));
+                $("#message1").text("")
+                $("#message2").text("Press the Attack button to fight Yennefer");
             }
         });
         this.triss.click(function () {
@@ -112,6 +118,8 @@ var rpg = {
                 rpg.enemy = this;
                 rpg.enemyHP = $(this).find('.hp').text();
                 rpg.enemyCounter = parseInt($(this).attr('data-counter'));
+                $("#message1").text("")
+                $("#message2").text("Press the Attack button to fight Triss");
             }
         });   
     }         
