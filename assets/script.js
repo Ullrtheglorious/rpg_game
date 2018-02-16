@@ -82,7 +82,7 @@ var rpg = {
 // This allows you to select an enemy after you have selected a champion
     enemySelect: function () {
         this.ciri.click(function () {
-            if (rpg.compChoice === false) {
+            if (rpg.compChoice === false && rpg.player !== this) {
                 $(this).appendTo("#computerChampion");
                 $("#attack").show("slow");
                 rpg.compChoice = true;
@@ -94,7 +94,7 @@ var rpg = {
             }
         });
         this.geralt.click(function () {
-            if (rpg.compChoice === false) {
+            if (rpg.compChoice === false && rpg.player !== this) {
                 $(this).appendTo("#computerChampion");
                 $("#attack").show("slow");
                 rpg.compChoice = true;
@@ -106,7 +106,7 @@ var rpg = {
             }
         });
         this.yennefer.click(function () {
-            if (rpg.compChoice === false) {
+            if (rpg.compChoice === false && rpg.player !== this) {
                 $(this).appendTo("#computerChampion");
                 $("#attack").show("slow");
                 rpg.compChoice = true;
@@ -118,7 +118,7 @@ var rpg = {
             }
         });
         this.triss.click(function () {
-            if (rpg.compChoice === false) {
+            if (rpg.compChoice === false && rpg.player !== this) {
                 $(this).appendTo("#computerChampion");
                 $("#attack").show("slow");
                 rpg.compChoice = true;
